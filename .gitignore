@@ -4,9 +4,9 @@
 *.pidb
 *.userprefs
 
-Library/
-ProjectSettings/
-Temp/
+SimpleCombat/Library/
+SimpleCombat/ProjectSettings/
+SimpleCombat/Temp/
 
 
 
