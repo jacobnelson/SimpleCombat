@@ -187,12 +187,14 @@ public class GameController : MonoBehaviour {
 			
 		case TurnStage.ChooseAttack:
 			
-			
+			GUI.Label(new Rect(Screen.width / 2 - 100, 50, 200, 20), "Choose Attack");
 			
 			for (int i = 0; i < attacker.attackList.Count; i++)
 			{
 				AttackOption atk = attacker.attackList[i];
-				if (GUI.Button(new Rect(Screen.width / 2 - 300, Screen.height / 2 - 30 * i * attacker.attackList.Count / 2, 600, 20), "|" + atk.attackName + "| " + atk.attackGroup.ToString() + " " + atk.attackMethod.ToString() + " Power: " + atk.basePower + " Cost: " + atk.enduranceCost))
+				float cellHeight = 60;
+				float yValue = (Screen.height / 2 - (float)attacker.attackList.Count / 2 * cellHeight) + (i * cellHeight) + 10;
+				if (GUI.Button(new Rect(Screen.width / 2 - 200, yValue, 400, 40), "|" + atk.attackName + "| " + atk.attackGroup.ToString() + " " + atk.attackMethod.ToString() + " Power: " + atk.basePower + " Cost: " + atk.enduranceCost + "\n" + atk.attackDescription))
 				{
 					currentAttack = atk;
 					turnStage = TurnStage.ChooseAttackType;
