@@ -1,3 +1,16 @@
+###Unity Project Files
+*.sln
+*.csproj
+*.pidb
+*.userprefs
+
+Library/
+ProjectSettings/
+Temp/
+
+
+
+
 #################
 ## Eclipse
 #################
