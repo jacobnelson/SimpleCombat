@@ -94,17 +94,31 @@ public class GameController : MonoBehaviour {
 	void PassStats(Player playerIn, out Profile playerOut){
 		playerIn.hpMax = temp.health;
 		playerIn.enduranceMax = temp.maxStamina;
+
 		playerIn.enduranceRegen = temp.stamRegen;
-		playerIn.AddAttackOption("Punch", AttackMethod.Attack, ActionGroup.Group1, temp.attack_1, 1, "Punch their Face!");
-		playerIn.AddAttackOption("Kick" , AttackMethod.Attack, ActionGroup.Group2, temp.attack_2, 2, "Kick ya in the pants!");
-		playerIn.AddAttackOption("Sword", AttackMethod.Attack, ActionGroup.Group3, temp.attack_3, 3, "Where did that sword come from!");
-		playerIn.AddAttackOption("Calm Mind", AttackMethod.Meditation, ActionGroup.Group1, temp.meditate_1, 0, "calms the mind");
-		playerIn.AddAttackOption("Warm Tea" , AttackMethod.Meditation, ActionGroup.Group2, temp.meditate_2, 0, "mmmmmm tea");
-		playerIn.AddAttackOption("Sleep"    , AttackMethod.Meditation, ActionGroup.Group3, temp.meditate_3, 0, "West and Wewaxation at wast");
+		playerIn.AddAttackOption(temp.attack_1);
+		playerIn.AddAttackOption(temp.attack_2);
+		playerIn.AddAttackOption(temp.attack_3);
+		playerIn.AddAttackOption(temp.meditate_1);
+		playerIn.AddAttackOption(temp.meditate_2);
+		playerIn.AddAttackOption(temp.meditate_3);
 		
-		playerIn.AddDefendOption("Mommy" , ActionGroup.Group1, temp.defend_1, 1, "Awww.. needs his mommy to protect him.");
-		playerIn.AddDefendOption("Block" , ActionGroup.Group2, temp.defend_2, 1, "block with your arm");
-		playerIn.AddDefendOption("Shield", ActionGroup.Group3, temp.defend_3, 1, "Made out of wood");
+		playerIn.AddDefendOption(temp.defend_1);
+		playerIn.AddDefendOption(temp.defend_2);
+		playerIn.AddDefendOption(temp.defend_3);
+
+		playerIn.enduranceRegen = temp.stamRegen;
+		playerIn.AddAttackOption(temp.attack_1);
+		playerIn.AddAttackOption(temp.attack_2);
+		playerIn.AddAttackOption(temp.attack_3);
+		playerIn.AddAttackOption(temp.meditate_1);
+		playerIn.AddAttackOption(temp.meditate_2);
+		playerIn.AddAttackOption(temp.meditate_3);
+		
+		playerIn.AddDefendOption(temp.defend_1);
+		playerIn.AddDefendOption(temp.defend_2);
+		playerIn.AddDefendOption(temp.defend_3);
+
 		
 		
 		playerOut = playerIn;

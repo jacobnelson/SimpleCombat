@@ -37,7 +37,9 @@ public class TitleScreen : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+		foreach(PlayerCard card in cards){
+			card.Assign();
+		}
 	}
 	
 	// Update is called once per frame
@@ -127,29 +129,30 @@ public class TitleScreen : MonoBehaviour {
 	//draws the stats in the stats window
 	void PlayerStatsWindow(int windowID){
 		
-		GUI.TextArea(new Rect(20, 25, 150, 25), "Attack 1");
-		GUI.TextArea(new Rect(20, 55 , 150, 25), "Attack 2");
-		GUI.TextArea(new Rect(20, 85 , 150, 25), "Attack 3");
-		GUI.TextArea(new Rect(20, 115, 150, 25), "Defence 1");
-		GUI.TextArea(new Rect(20, 145, 150, 25), "Defence 2");
-		GUI.TextArea(new Rect(20, 175, 150, 25), "Defense 3");
-		GUI.TextArea(new Rect(20, 205, 150, 25), "Meditate 1");
-		GUI.TextArea(new Rect(20, 235, 150, 25), "Meditate 2");
-		GUI.TextArea(new Rect(20, 265, 150, 25), "Meditate 3");
-		GUI.TextArea(new Rect(20, 295, 150, 25), "Health");
-		GUI.TextArea(new Rect(20, 325, 150, 25), "Stamina");
-		GUI.TextArea(new Rect(20, 355, 150, 25), "Stamina Regen Rate");
-		
 		if(selectedPlayer > 0){
-			GUI.TextArea(new Rect(230, 25 , 150, 25), cards[selectedPlayer-1].attack_1.ToString());
-			GUI.TextArea(new Rect(230, 55 , 150, 25), cards[selectedPlayer-1].attack_2.ToString());
-			GUI.TextArea(new Rect(230, 85 , 150, 25), cards[selectedPlayer-1].attack_3.ToString());
-			GUI.TextArea(new Rect(230, 115, 150, 25), cards[selectedPlayer-1].defend_1.ToString());
-			GUI.TextArea(new Rect(230, 145, 150, 25), cards[selectedPlayer-1].defend_2.ToString());
-			GUI.TextArea(new Rect(230, 175, 150, 25), cards[selectedPlayer-1].defend_3.ToString());
-			GUI.TextArea(new Rect(230, 205, 150, 25), cards[selectedPlayer-1].meditate_1.ToString());
-			GUI.TextArea(new Rect(230, 235, 150, 25), cards[selectedPlayer-1].meditate_2.ToString());
-			GUI.TextArea(new Rect(230, 265, 150, 25), cards[selectedPlayer-1].meditate_3.ToString());
+			GUI.TextArea(new Rect(20, 25 , 150, 25), cards[selectedPlayer - 1].attack_1.attackName);
+			GUI.TextArea(new Rect(20, 55 , 150, 25), cards[selectedPlayer - 1].attack_2.attackName);
+			GUI.TextArea(new Rect(20, 85 , 150, 25), cards[selectedPlayer - 1].attack_3.attackName);
+			GUI.TextArea(new Rect(20, 115, 150, 25), cards[selectedPlayer - 1].defend_1.defendName);
+			GUI.TextArea(new Rect(20, 145, 150, 25), cards[selectedPlayer - 1].defend_2.defendName);
+			GUI.TextArea(new Rect(20, 175, 150, 25), cards[selectedPlayer - 1].defend_3.defendName);
+			GUI.TextArea(new Rect(20, 205, 150, 25), cards[selectedPlayer - 1].meditate_1.attackName);
+			GUI.TextArea(new Rect(20, 235, 150, 25), cards[selectedPlayer - 1].meditate_2.attackName);
+			GUI.TextArea(new Rect(20, 265, 150, 25), cards[selectedPlayer - 1].meditate_3.attackName);
+			GUI.TextArea(new Rect(20, 295, 150, 25), "Health");
+			GUI.TextArea(new Rect(20, 325, 150, 25), "Stamina");
+			GUI.TextArea(new Rect(20, 355, 150, 25), "Stamina Regen Rate");
+		
+		
+			GUI.TextArea(new Rect(230, 25 , 150, 25), cards[selectedPlayer-1].attack_1.basePower.ToString());
+			GUI.TextArea(new Rect(230, 55 , 150, 25), cards[selectedPlayer-1].attack_2.basePower.ToString());
+			GUI.TextArea(new Rect(230, 85 , 150, 25), cards[selectedPlayer-1].attack_3.basePower.ToString());
+			GUI.TextArea(new Rect(230, 115, 150, 25), cards[selectedPlayer-1].defend_1.baseDefense.ToString());
+			GUI.TextArea(new Rect(230, 145, 150, 25), cards[selectedPlayer-1].defend_2.baseDefense.ToString());
+			GUI.TextArea(new Rect(230, 175, 150, 25), cards[selectedPlayer-1].defend_3.baseDefense.ToString());
+			GUI.TextArea(new Rect(230, 205, 150, 25), cards[selectedPlayer-1].meditate_1.basePower.ToString());
+			GUI.TextArea(new Rect(230, 235, 150, 25), cards[selectedPlayer-1].meditate_2.basePower.ToString());
+			GUI.TextArea(new Rect(230, 265, 150, 25), cards[selectedPlayer-1].meditate_3.basePower.ToString());
 			GUI.TextArea(new Rect(230, 295, 150, 25), cards[selectedPlayer-1].health.ToString());
 			GUI.TextArea(new Rect(230, 325, 150, 25), cards[selectedPlayer-1].maxStamina.ToString());
 			GUI.TextArea(new Rect(230, 355, 150, 25), cards[selectedPlayer-1].stamRegen.ToString());

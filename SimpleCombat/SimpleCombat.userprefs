@@ -2,9 +2,16 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CombatModule\Scripts\GameController.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\CombatModule\Scripts\GameController.cs" Line="198" Column="6" />
       <File FileName="Assets\CombatModule\Scripts\Profile.cs" Line="15" Column="22" />
       <File FileName="Assets\CombatModule\Scripts\Player.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\CombatModule\Scripts\GameController.cs" Line="113" Column="36" />
+      <File FileName="Assets\CombatModule\Scripts\TitleScreen.cs" Line="41" Column="18" />
+      <File FileName="Assets\CombatModule\Scripts\Profile.cs" Line="42" Column="27" />
+      <File FileName="Assets\CombatModule\Scripts\PlayerCard.cs" Line="72" Column="9" />
+>>>>>>> 4d70b267346aaa718e8c5801044b1fdf1dd655d3
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

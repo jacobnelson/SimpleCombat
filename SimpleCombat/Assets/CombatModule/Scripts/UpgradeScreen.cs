@@ -103,15 +103,15 @@ public class UpgradeScreen : MonoBehaviour {
 		
 		//upgrade buttons for upgrading the player
 		// upgrades the stats and the player chi level
-		if (GUI.Button(new Rect(310, 25 , 75, 25), "UPGRADE")) {player.attack_1++;       player.level++;}
-		if (GUI.Button(new Rect(310, 55 , 75, 25), "UPGRADE")) {player.attack_2++;       player.level++;}
-		if (GUI.Button(new Rect(310, 85 , 75, 25), "UPGRADE")) {player.attack_3++;       player.level++;}
-		if (GUI.Button(new Rect(310, 115, 75, 25), "UPGRADE")) {player.defend_1++;       player.level++;}
-		if (GUI.Button(new Rect(310, 145, 75, 25), "UPGRADE")) {player.defend_2++;       player.level++;}
-		if (GUI.Button(new Rect(310, 175, 75, 25), "UPGRADE")) {player.defend_3++;       player.level++;}
-		if (GUI.Button(new Rect(310, 205, 75, 25), "UPGRADE")) {player.meditate_1++;     player.level++;}
-		if (GUI.Button(new Rect(310, 235, 75, 25), "UPGRADE")) {player.meditate_2++;     player.level++;}
-		if (GUI.Button(new Rect(310, 265, 75, 25), "UPGRADE")) {player.meditate_3++;     player.level++;}
+		if (GUI.Button(new Rect(310, 25 , 75, 25), "UPGRADE")) {player.attack_1.basePower++;       player.level++;}
+		if (GUI.Button(new Rect(310, 55 , 75, 25), "UPGRADE")) {player.attack_2.basePower++;       player.level++;}
+		if (GUI.Button(new Rect(310, 85 , 75, 25), "UPGRADE")) {player.attack_3.basePower++;       player.level++;}
+		if (GUI.Button(new Rect(310, 115, 75, 25), "UPGRADE")) {player.defend_1.baseDefense++;       player.level++;}
+		if (GUI.Button(new Rect(310, 145, 75, 25), "UPGRADE")) {player.defend_2.baseDefense++;       player.level++;}
+		if (GUI.Button(new Rect(310, 175, 75, 25), "UPGRADE")) {player.defend_3.baseDefense++;       player.level++;}
+		if (GUI.Button(new Rect(310, 205, 75, 25), "UPGRADE")) {player.meditate_1.basePower++;     player.level++;}
+		if (GUI.Button(new Rect(310, 235, 75, 25), "UPGRADE")) {player.meditate_2.basePower++;     player.level++;}
+		if (GUI.Button(new Rect(310, 265, 75, 25), "UPGRADE")) {player.meditate_3.basePower++;     player.level++;}
 		if (GUI.Button(new Rect(310, 295, 75, 25), "UPGRADE")) {player.health += 10;     player.level++;}
 		if (GUI.Button(new Rect(310, 325, 75, 25), "UPGRADE")) {player.maxStamina += 10; player.level++;}
 		if (GUI.Button(new Rect(310, 355, 75, 25), "UPGRADE")) {player.stamRegen++;      player.level++;}

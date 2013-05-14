@@ -38,10 +38,20 @@ public class Profile {
 		attackList.Add(atkOpt);
 	}
 	
+	public void AddAttackOption(AttackOption attopt){
+		attackList.Add (attopt);
+		
+	}
+	
 	public void AddDefendOption(string defendName, ActionGroup defendGroup, int baseDefense, int enduranceCost, string defendDescription)
 	{
 		DefendOption defOpt = new DefendOption(defendName, defendGroup, baseDefense, enduranceCost, defendDescription);
 		defendList.Add(defOpt);
+	}
+	
+	public void AddDefendOption(DefendOption defopt){
+		defendList.Add (defopt);
+		
 	}
 	
 	
