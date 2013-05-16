@@ -47,21 +47,21 @@ public class PlayerCard : MonoBehaviour{
 	public int med3Power = 3;
 	
 	//the three attack styles
-	public AttackOption attack_1 = new AttackOption("Punch", AttackMethod.Attack, ActionGroup.Group1, 1, 1, "punch ya");
-	public AttackOption attack_2 = new AttackOption("kick", AttackMethod.Attack, ActionGroup.Group2, 2, 2, "kick ya");
-	public AttackOption attack_3 = new AttackOption("sword", AttackMethod.Attack, ActionGroup.Group3, 3, 3, "swish swish clang clang");
+	public AttackOption attack_1 = new AttackOption("Punch", AttackMethod.Attack, ActionGroup.Group1, 1, 2, "punch ya");
+	public AttackOption attack_2 = new AttackOption("kick", AttackMethod.Attack, ActionGroup.Group2, 2, 6, "kick ya");
+	public AttackOption attack_3 = new AttackOption("sword", AttackMethod.Attack, ActionGroup.Group3, 3, 10, "swish swish clang clang");
 	
 	
 	//the three defense styles
-	public DefendOption defend_1 = new DefendOption("mommy", ActionGroup.Group1, 1, 1 ,"Aww you need your mommy..");
-	public DefendOption defend_2 = new DefendOption("Block", ActionGroup.Group1, 2, 2 ,"Block with arm");
-	public DefendOption defend_3 = new DefendOption("Shield", ActionGroup.Group1, 3, 3 ,"made of wood");
+	public DefendOption defend_1 = new DefendOption("mommy", ActionGroup.Group1, 1, 1,"Aww you need your mommy..");
+	public DefendOption defend_2 = new DefendOption("Block", ActionGroup.Group2, 2, 3,"Block with arm");
+	public DefendOption defend_3 = new DefendOption("Shield", ActionGroup.Group3, 3, 6,"made of wood");
 	
 	
 	//the three meditate styles
-	public AttackOption meditate_1 = new AttackOption("calm mind", AttackMethod.Attack, ActionGroup.Group1, 1, 0, "calms the mind");
-	public AttackOption meditate_2 = new AttackOption("restful tea", AttackMethod.Attack, ActionGroup.Group1, 2, 0, "mmmmmm...tea");
-	public AttackOption meditate_3 = new AttackOption("sleep", AttackMethod.Attack, ActionGroup.Group1, 3, 0, "west and wewaxation at wast!");
+	public AttackOption meditate_1 = new AttackOption("calm mind", AttackMethod.Meditation, ActionGroup.Group1, 1, 0, "calms the mind");
+	public AttackOption meditate_2 = new AttackOption("restful tea", AttackMethod.Meditation, ActionGroup.Group2, 2, 0, "mmmmmm...tea");
+	public AttackOption meditate_3 = new AttackOption("sleep", AttackMethod.Meditation, ActionGroup.Group3, 3, 0, "west and wewaxation at wast!");
 	
 	
 	//health stamina and stamina regen rate
@@ -70,7 +70,6 @@ public class PlayerCard : MonoBehaviour{
 	public int stamRegen = 3;
 	
 	public void Assign(){
-		Debug.Log ("i did it");
 		attack_1.attackName = att1Name;
 		attack_1.attackDescription = att1Discript;
 		attack_1.basePower = att1Power;

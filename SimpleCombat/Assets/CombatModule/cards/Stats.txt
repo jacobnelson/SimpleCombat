@@ -1,0 +1,20 @@
+Card Stats:
+
+standard:
+
+attack_1: 8
+attack_2: 10
+attack_3:
+
+defend_1: 
+
+defend_2:
+attack_3:
+
+attack_2:
+attack_2:
+attack_2:
+
+HP
+Endurance:
+Regen Rate:
