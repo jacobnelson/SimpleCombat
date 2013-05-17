@@ -3,14 +3,14 @@ using System.Collections;
 
 public class DefendOption {
 
-	public ActionGroup defendGroup;
-	public ActionType defendType;
+	public ActionGroup defendGroup; //What group level this belongs to
+	public ActionType defendType; //A container for what type this attack will be at any given stage. Rock, paper, or scissors
 	
-	public int baseDefense;
-	public int enduranceCost;
+	public int baseDefense; //Base defense amount
+	public int enduranceCost; //How much endurance this option costs
 	
-	public string defendName;
-	public string defendDescription;
+	public string defendName; //Name of defense option
+	public string defendDescription; //Description of defend option
 	
 	
 	public DefendOption(string defendName, ActionGroup defendGroup, int baseDefense, int enduranceCost, string defendDescription)

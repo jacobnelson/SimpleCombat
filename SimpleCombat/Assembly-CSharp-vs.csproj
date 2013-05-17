@@ -53,10 +53,6 @@
      <Compile Include="Assets\CombatModule\Scripts\TitleScreen.cs" />
      <Compile Include="Assets\CombatModule\Scripts\UpgradeScreen.cs" />
      <None Include="Assets\CombatModule\cards\Stats.txt" />
-     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
- <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
- </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

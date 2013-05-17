@@ -13,7 +13,7 @@ public class UpgradeScreen : MonoBehaviour {
 	//the card that is passed into the upgrade scene to be upgraded
 	static public Profile temp1;
 	static public Profile temp2;
-
+	
 	//run this when loading this screen to pass player to be upgraded into temp
 	public static void getPlayer(Player importPlayer, out Profile temp){
 		temp = importPlayer;
@@ -67,10 +67,17 @@ public class UpgradeScreen : MonoBehaviour {
 	//draws the three windows
 	void OnGUI(){
 		string currentName = "";
-		if(!player1Went)currentName = temp1.name;
-		else currentName = temp2.name;
+		string currentPlayer = "";
+		if(!player1Went){
+			currentName = temp1.name;
+			currentPlayer = "Player 1";
+		}
+		else {
+			currentName = temp2.name;
+			currentPlayer = "Player 2";
+		}
 		mainWindow = GUI.Window(0,mainWindow, DoMainWindow, "Upgrade");
-		statsWindow = GUI.Window(1,statsWindow, DoStatsWindow, "Stats: " + currentName);
+		statsWindow = GUI.Window(1,statsWindow, DoStatsWindow, currentPlayer +": " + currentName);
 		chiWindow = GUI.Window(2,chiWindow, DoChiWindow, "Chi Level");
 		
 		
@@ -175,37 +182,7 @@ public class UpgradeScreen : MonoBehaviour {
 		
 		if (GUI.Button(new Rect(310, 295, 75, 25), "UPGRADE")) {
 			if(pointsEarned > 4){
-		
-		if (GUI.Button(new Rect(310, 25 , 75, 75), "UPGRADE")) {
-			if(pointsEarned > 1){
-				player.attackList[0].basePower += 1;  
-				player.attackList[1].basePower += 2; 
-				player.attackList[2].basePower += 3; 
-				pointsEarned -= 2;
-			}
-		}
-		
-		if (GUI.Button(new Rect(310, 115, 75, 75), "UPGRADE")) {
-			if(pointsEarned > 1){
-				player.defendList[0].baseDefense += 1;  
-				player.defendList[1].baseDefense += 2;  
-				player.defendList[2].baseDefense += 3;  
-				pointsEarned -= 2;
-			}
-		}
-		if(pointsEarned < 4) GUI.color = Color.red;
-		else GUI.color = Color.green;
-		
-		
-		if (GUI.Button(new Rect(310, 205, 75, 75), "UPGRADE")) {
-			if(pointsEarned > 3){
-				player.attackList[3].basePower += 1;
-				player.attackList[4].basePower += 2;
-				player.attackList[5].basePower += 3;
-				pointsEarned -= 4;
-			}
-		}
-		
+				player.hpMax += 5;     
 				pointsEarned -= 5;
 			}
 		}
